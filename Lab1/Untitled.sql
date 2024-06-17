@@ -1,0 +1,9 @@
+-- Active: 1716157584685@@127.0.0.1@5432@postgres
+CREATE DATABASE online_store;
+
+CREATE USER admin_user WITH PASSWORD '1234';
+GRANT ALL PRIVILEGES ON DATABASE online_store TO admin_user;
+
+CREATE USER user_1 WITH PASSWORD '5678';
+GRANT CONNECT  ON DATABASE online_store to user_1; 
+GRANT SELECT ON ALL TABLES IN SCHEMA public TO read_only_user;
